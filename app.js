@@ -2,10 +2,21 @@
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
+const morgan = require('morgan');
 const setupSwagger = require('./swagger');
+const customLogger = require('./customLogger');
 
 const app = express();
 const port = 3000;
+
+// Create a write stream (in append mode) for Morgan
+const accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), { flags: 'a' });
+
+// Setup Morgan for logging
+app.use(morgan('combined', { stream: accessLogStream }));
+
+// Setup custom logger
+app.use(customLogger);
 
 // Function to read JSON data from file
 const readJsonFile = (filePath) => {
@@ -14,6 +25,11 @@ const readJsonFile = (filePath) => {
 
 // Setup Swagger
 setupSwagger(app);
+
+// Front page endpoint
+app.get('/node', (req, res) => {
+  res.send('<h1>Welcome to the Dummy API</h1><p>Use <a href="/node/api-docs">/node/api-docs</a> to view the API documentation.</p>');
+});
 
 // Endpoint to get users
 /**
@@ -69,11 +85,6 @@ app.get('/node/users', (req, res) => {
 app.get('/node/products', (req, res) => {
   const data = readJsonFile('data.json');
   res.json(data.products);
-});
-
-// Front page endpoint
-app.get('/node', (req, res) => {
-  res.send('<h1>Welcome to the Dummy API</h1><p>Use <a href="/node/api-docs">/node/api-docs</a> to view the API documentation.</p>');
 });
 
 app.listen(port, () => {
