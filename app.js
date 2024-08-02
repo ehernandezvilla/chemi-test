@@ -12,13 +12,13 @@ const readJsonFile = (filePath) => {
 };
 
 // Endpoint to get users
-app.get('/users', (req, res) => {
+app.get('/node/users', (req, res) => {
   const data = readJsonFile('data.json');
   res.json(data.users);
 });
 
 // Endpoint to get products
-app.get('/products', (req, res) => {
+app.get('/node/products', (req, res) => {
   const data = readJsonFile('data.json');
   res.json(data.products);
 });
