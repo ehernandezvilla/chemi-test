@@ -4,12 +4,16 @@ const fs = require('fs');
 const path = require('path');
 const morgan = require('morgan');
 const setupSwagger = require('./swagger');
+const customLogger = require('./customLogger');
 
 const app = express();
 const port = 3000;
 
 // Setup Morgan for logging
 app.use(morgan('combined'));
+
+// Setup custom logger
+app.use(customLogger);
 
 // Function to read JSON data from file
 const readJsonFile = (filePath) => {
