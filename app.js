@@ -2,6 +2,7 @@
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
+const setupSwagger = require('./swagger');
 
 const app = express();
 const port = 3000;
@@ -11,16 +12,68 @@ const readJsonFile = (filePath) => {
   return JSON.parse(fs.readFileSync(path.resolve(__dirname, filePath)));
 };
 
+// Setup Swagger
+setupSwagger(app);
+
 // Endpoint to get users
+/**
+ * @swagger
+ * /node/users:
+ *   get:
+ *     summary: Retrieve a list of users
+ *     responses:
+ *       200:
+ *         description: A list of users
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: array
+ *               items:
+ *                 type: object
+ *                 properties:
+ *                   id:
+ *                     type: integer
+ *                   name:
+ *                     type: string
+ *                   email:
+ *                     type: string
+ */
 app.get('/node/users', (req, res) => {
   const data = readJsonFile('data.json');
   res.json(data.users);
 });
 
 // Endpoint to get products
+/**
+ * @swagger
+ * /node/products:
+ *   get:
+ *     summary: Retrieve a list of products
+ *     responses:
+ *       200:
+ *         description: A list of products
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: array
+ *               items:
+ *                 type: object
+ *                 properties:
+ *                   id:
+ *                     type: integer
+ *                   name:
+ *                     type: string
+ *                   price:
+ *                     type: number
+ */
 app.get('/node/products', (req, res) => {
   const data = readJsonFile('data.json');
   res.json(data.products);
+});
+
+// Front page endpoint
+app.get('/node', (req, res) => {
+  res.send('<h1>Welcome to the Dummy API</h1><p>Use <a href="/node/api-docs">/node/api-docs</a> to view the API documentation.</p>');
 });
 
 app.listen(port, () => {
