@@ -2,10 +2,14 @@
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
+const morgan = require('morgan');
 const setupSwagger = require('./swagger');
 
 const app = express();
 const port = 3000;
+
+// Setup Morgan for logging
+app.use(morgan('combined'));
 
 // Function to read JSON data from file
 const readJsonFile = (filePath) => {
@@ -14,6 +18,11 @@ const readJsonFile = (filePath) => {
 
 // Setup Swagger
 setupSwagger(app);
+
+// Front page endpoint
+app.get('/node', (req, res) => {
+  res.send('<h1>Welcome to the Dummy API</h1><p>Use <a href="/node/api-docs">/node/api-docs</a> to view the API documentation.</p>');
+});
 
 // Endpoint to get users
 /**
@@ -69,11 +78,6 @@ app.get('/node/users', (req, res) => {
 app.get('/node/products', (req, res) => {
   const data = readJsonFile('data.json');
   res.json(data.products);
-});
-
-// Front page endpoint
-app.get('/node', (req, res) => {
-  res.send('<h1>Welcome to the Dummy API</h1><p>Use <a href="/node/api-docs">/node/api-docs</a> to view the API documentation.</p>');
 });
 
 app.listen(port, () => {
