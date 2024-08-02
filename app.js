@@ -9,8 +9,11 @@ const customLogger = require('./customLogger');
 const app = express();
 const port = 3000;
 
+// Create a write stream (in append mode) for Morgan
+const accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), { flags: 'a' });
+
 // Setup Morgan for logging
-app.use(morgan('combined'));
+app.use(morgan('combined', { stream: accessLogStream }));
 
 // Setup custom logger
 app.use(customLogger);
