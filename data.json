@@ -1,11 +1,164 @@
 {
-    "users": [
-      { "id": 1, "name": "John Doe", "email": "john@example.com" },
-      { "id": 2, "name": "Jane Smith", "email": "jane@example.com" }
-    ],
-    "products": [
-      { "id": 1, "name": "Laptop", "price": 999.99 },
-      { "id": 2, "name": "Phone", "price": 699.99 }
-    ]
-  }
-  
+  "articles": [
+    {
+      "id": 1,
+      "title": "Boost your conversion rate",
+      "href": "#",
+      "description": "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel iusto corrupti dicta laboris incididunt.",
+      "imageUrl": "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80",
+      "date": "Mar 16, 2020",
+      "datetime": "2020-03-16",
+      "category": { "title": "Marketing", "href": "#" },
+      "author": {
+        "name": "Michael Foster",
+        "role": "Co-Founder / CTO",
+        "href": "#",
+        "imageUrl": "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Mastering the Art of Remote Work",
+      "href": "#",
+      "description": "Embrace the future of work with our comprehensive guide to remote productivity. Learn essential strategies for maintaining work-life balance, enhancing communication in virtual teams, and leveraging technology to stay connected and efficient from anywhere in the world.",
+      "imageUrl": "https://images.unsplash.com/photo-1521321205814-9d673c65c167?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3540&q=80",
+      "date": "Sep 22, 2023",
+      "datetime": "2023-09-22",
+      "category": { "title": "Productivity", "href": "#" },
+      "author": {
+        "name": "Sophia Chen",
+        "role": "Remote Work Consultant",
+        "href": "#",
+        "imageUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+      }
+    },
+    {
+      "id": 3,
+      "title": "The Future of AI in Healthcare",
+      "href": "#",
+      "description": "Explore the revolutionary impact of artificial intelligence on modern medicine. From early disease detection to personalized treatment plans, discover how AI is transforming patient care, drug discovery, and medical research, ushering in a new era of healthcare innovation.",
+      "imageUrl": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3540&q=80",
+      "date": "Jan 5, 2024",
+      "datetime": "2024-01-05",
+      "category": { "title": "Technology", "href": "#" },
+      "author": {
+        "name": "Dr. Alex Johnson",
+        "role": "AI Research Scientist",
+        "href": "#",
+        "imageUrl": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Sustainable Living: Small Changes, Big Impact",
+      "href": "#",
+      "description": "Discover practical ways to reduce your carbon footprint and live a more eco-friendly lifestyle. From energy-saving tips to sustainable shopping habits, learn how small daily choices can contribute to a healthier planet.",
+      "imageUrl": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3540&q=80",
+      "date": "Apr 18, 2023",
+      "datetime": "2023-04-18",
+      "category": { "title": "Lifestyle", "href": "#" },
+      "author": {
+        "name": "Emma Green",
+        "role": "Environmental Activist",
+        "href": "#",
+        "imageUrl": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+      }
+    },
+    {
+      "id": 5,
+      "title": "The Rise of Decentralized Finance (DeFi)",
+      "href": "#",
+      "description": "Uncover the potential of DeFi and how it's reshaping the financial landscape. Learn about smart contracts, yield farming, and the promise of a more inclusive, transparent financial system.",
+      "imageUrl": "https://images.unsplash.com/photo-1639322537504-6427a16b0a28?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3540&q=80",
+      "date": "Nov 3, 2023",
+      "datetime": "2023-11-03",
+      "category": { "title": "Finance", "href": "#" },
+      "author": {
+        "name": "David Lee",
+        "role": "Crypto Analyst",
+        "href": "#",
+        "imageUrl": "https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+      }
+    },
+    {
+      "id": 6,
+      "title": "Mindfulness in the Digital Age",
+      "href": "#",
+      "description": "Navigate the challenges of constant connectivity with mindfulness techniques. Explore ways to maintain focus, reduce stress, and cultivate presence in an increasingly digital world.",
+      "imageUrl": "https://images.unsplash.com/photo-1512438248247-f0f2a5a8b7f0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3540&q=80",
+      "date": "Jun 12, 2023",
+      "datetime": "2023-06-12",
+      "category": { "title": "Mental Health", "href": "#" },
+      "author": {
+        "name": "Sarah Patel",
+        "role": "Mindfulness Coach",
+        "href": "#",
+        "imageUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+      }
+    },
+    {
+      "id": 7,
+      "title": "The Evolution of E-commerce",
+      "href": "#",
+      "description": "From the early days of online shopping to the rise of social commerce and augmented reality experiences, explore how e-commerce continues to transform the retail landscape.",
+      "imageUrl": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3540&q=80",
+      "date": "Aug 28, 2023",
+      "datetime": "2023-08-28",
+      "category": { "title": "Business", "href": "#" },
+      "author": {
+        "name": "Ryan Zhang",
+        "role": "E-commerce Strategist",
+        "href": "#",
+        "imageUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+      }
+    },
+    {
+      "id": 8,
+      "title": "The Science of Sleep",
+      "href": "#",
+      "description": "Delve into the latest research on sleep and its crucial role in physical and mental health. Learn about sleep cycles, the impact of technology on rest, and strategies for improving your sleep quality.",
+      "imageUrl": "https://images.unsplash.com/photo-1515894203077-2cd903ba3f9a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3540&q=80",
+      "date": "Feb 15, 2024",
+      "datetime": "2024-02-15",
+      "category": { "title": "Health", "href": "#" },
+      "author": {
+        "name": "Dr. Olivia Nguyen",
+        "role": "Sleep Researcher",
+        "href": "#",
+        "imageUrl": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+      }
+    },
+    {
+      "id": 9,
+      "title": "The Future of Renewable Energy",
+      "href": "#",
+      "description": "Explore the latest innovations in solar, wind, and other renewable energy sources. Learn about emerging technologies and policies shaping a sustainable energy future.",
+      "imageUrl": "https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3540&q=80",
+      "date": "May 7, 2023",
+      "datetime": "2023-05-07",
+      "category": { "title": "Environment", "href": "#" },
+      "author": {
+        "name": "Thomas Wilson",
+        "role": "Renewable Energy Expert",
+        "href": "#",
+        "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+      }
+    },
+    {
+      "id": 10,
+      "title": "The Art of Public Speaking",
+      "href": "#",
+      "description": "Master the skills of effective communication and captivating audiences. From structuring your talk to managing stage fright, discover techniques to become a confident and persuasive speaker.",
+      "imageUrl": "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3540&q=80",
+      "date": "Oct 10, 2023",
+      "datetime": "2023-10-10",
+      "category": { "title": "Personal Development", "href": "#" },
+      "author": {
+        "name": "Elena Rodriguez",
+        "role": "Communications Coach",
+        "href": "#",
+        "imageUrl": "https://images.unsplash.com/photo-1505840717430-882ce147ef2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+      }
+    }
+  ]
+}
