@@ -35,7 +35,7 @@ app.get('/node', (req, res) => {
   res.send('<h1>Welcome to the Dummy API</h1><p>Use <a href="/node/api-docs">/node/api-docs</a> to view the API documentation.</p>');
 });
 
-// Endpoint to get articles
+// Endpoint to get all articles
 /**
  * @swagger
  * /node/articles:
@@ -49,44 +49,88 @@ app.get('/node', (req, res) => {
  *             schema:
  *               type: array
  *               items:
- *                 type: object
- *                 properties:
- *                   id:
- *                     type: integer
- *                   title:
- *                     type: string
- *                   href:
- *                     type: string
- *                   description:
- *                     type: string
- *                   imageUrl:
- *                     type: string
- *                   date:
- *                     type: string
- *                   datetime:
- *                     type: string
- *                   category:
- *                     type: object
- *                     properties:
- *                       title:
- *                         type: string
- *                       href:
- *                         type: string
- *                   author:
- *                     type: object
- *                     properties:
- *                       name:
- *                         type: string
- *                       role:
- *                         type: string
- *                       href:
- *                         type: string
- *                       imageUrl:
- *                         type: string
+ *                 $ref: '#/components/schemas/Article'
  */
 app.get('/node/articles', (req, res) => {
   const data = readJsonFile('data.json');
   res.json(data.articles);
+});
+
+// Endpoint to get a single article
+/**
+ * @swagger
+ * /node/articles/{id}:
+ *   get:
+ *     summary: Retrieve a single article
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: integer
+ *         description: The article ID
+ *     responses:
+ *       200:
+ *         description: A single article
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Article'
+ *       404:
+ *         description: Article not found
+ */
+app.get('/node/articles/:id', (req, res) => {
+  const data = readJsonFile('data.json');
+  const article = data.articles.find(a => a.id === parseInt(req.params.id));
+  if (article) {
+    res.json(article);
+  } else {
+    res.status(404).json({ message: 'Article not found' });
+  }
+});
+
+// Endpoint to get all authors
+/**
+ * @swagger
+ * /node/authors:
+ *   get:
+ *     summary: Retrieve a list of authors
+ *     responses:
+ *       200:
+ *         description: A list of authors
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: array
+ *               items:
+ *                 $ref: '#/components/schemas/Author'
+ */
+app.get('/node/authors', (req, res) => {
+  const data = readJsonFile('data.json');
+  const authors = data.articles.map(article => article.author);
+  res.json(authors);
+});
+
+// Endpoint to get all categories
+/**
+ * @swagger
+ * /node/categories:
+ *   get:
+ *     summary: Retrieve a list of categories
+ *     responses:
+ *       200:
+ *         description: A list of categories
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: array
+ *               items:
+ *                 $ref: '#/components/schemas/Category'
+ */
+app.get('/node/categories', (req, res) => {
+  const data = readJsonFile('data.json');
+  const categories = data.articles.map(article => article.category);
+  res.json(categories);
 });
 
 app.listen(port, () => {
