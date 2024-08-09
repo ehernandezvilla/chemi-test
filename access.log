@@ -36,3 +36,35 @@
 ::1 - - [02/Aug/2024:18:54:26 +0000] "GET /node/api-docs/ HTTP/1.1" 200 3106 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
 2024-08-02T18:54:28.296Z GET /node/api-docs/ 200
 ::1 - - [02/Aug/2024:18:54:28 +0000] "GET /node/api-docs/ HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
+2024-08-09T15:48:29.625Z GET / 200
+::1 - - [09/Aug/2024:15:48:29 +0000] "GET / HTTP/1.1" 404 139 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
+2024-08-09T15:48:30.266Z GET / 200
+::1 - - [09/Aug/2024:15:48:30 +0000] "GET / HTTP/1.1" 404 139 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
+2024-08-09T15:48:30.325Z GET /robots.txt 200
+::1 - - [09/Aug/2024:15:48:30 +0000] "GET /robots.txt HTTP/1.1" 404 149 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
+2024-08-09T15:48:48.391Z GET /node 200
+::1 - - [09/Aug/2024:15:48:48 +0000] "GET /node HTTP/1.1" 200 118 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
+2024-08-09T15:48:49.893Z GET /node/api-docs 200
+::1 - - [09/Aug/2024:15:48:49 +0000] "GET /node/api-docs HTTP/1.1" 301 193 "http://localhost:3000/node" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
+2024-08-09T15:48:49.898Z GET /node/api-docs/ 200
+::1 - - [09/Aug/2024:15:48:49 +0000] "GET /node/api-docs/ HTTP/1.1" 200 3106 "http://localhost:3000/node" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
+2024-08-09T15:48:49.927Z GET /node/api-docs/swagger-ui.css 200
+2024-08-09T15:48:49.930Z GET /node/api-docs/swagger-ui-bundle.js 200
+2024-08-09T15:48:49.932Z GET /node/api-docs/swagger-ui-standalone-preset.js 200
+2024-08-09T15:48:49.935Z GET /node/api-docs/swagger-ui-init.js 200
+::1 - - [09/Aug/2024:15:48:49 +0000] "GET /node/api-docs/swagger-ui-init.js HTTP/1.1" 200 4116 "http://localhost:3000/node/api-docs/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
+::1 - - [09/Aug/2024:15:48:49 +0000] "GET /node/api-docs/swagger-ui.css HTTP/1.1" 200 152071 "http://localhost:3000/node/api-docs/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
+::1 - - [09/Aug/2024:15:48:49 +0000] "GET /node/api-docs/swagger-ui-standalone-preset.js HTTP/1.1" 200 230293 "http://localhost:3000/node/api-docs/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
+2024-08-09T15:48:49.950Z GET /node/api-docs/swagger-ui-init.js 200
+::1 - - [09/Aug/2024:15:48:49 +0000] "GET /node/api-docs/swagger-ui-init.js HTTP/1.1" 200 4116 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
+::1 - - [09/Aug/2024:15:48:49 +0000] "GET /node/api-docs/swagger-ui-bundle.js HTTP/1.1" 200 1452753 "http://localhost:3000/node/api-docs/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
+2024-08-09T15:48:49.980Z GET /node/api-docs/swagger-ui-standalone-preset.js 200
+2024-08-09T15:48:49.983Z GET /node/api-docs/swagger-ui-bundle.js 200
+::1 - - [09/Aug/2024:15:48:49 +0000] "GET /node/api-docs/swagger-ui-standalone-preset.js HTTP/1.1" 200 230293 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
+::1 - - [09/Aug/2024:15:48:49 +0000] "GET /node/api-docs/swagger-ui-bundle.js HTTP/1.1" 200 1452753 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
+2024-08-09T15:48:50.171Z GET /node/api-docs/favicon-32x32.png 200
+::1 - - [09/Aug/2024:15:48:50 +0000] "GET /node/api-docs/favicon-32x32.png HTTP/1.1" 200 628 "http://localhost:3000/node/api-docs/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
+2024-08-09T15:48:51.455Z GET /node/api-docs/ 200
+::1 - - [09/Aug/2024:15:48:51 +0000] "GET /node/api-docs/ HTTP/1.1" 200 3106 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
+2024-08-09T15:48:53.976Z GET /node/articles 200
+::1 - - [09/Aug/2024:15:48:53 +0000] "GET /node/articles HTTP/1.1" 200 7903 "http://localhost:3000/node/api-docs/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"

@@ -31,15 +31,15 @@ app.get('/node', (req, res) => {
   res.send('<h1>Welcome to the Dummy API</h1><p>Use <a href="/node/api-docs">/node/api-docs</a> to view the API documentation.</p>');
 });
 
-// Endpoint to get users
+// Endpoint to get articles
 /**
  * @swagger
- * /node/users:
+ * /node/articles:
  *   get:
- *     summary: Retrieve a list of users
+ *     summary: Retrieve a list of articles
  *     responses:
  *       200:
- *         description: A list of users
+ *         description: A list of articles
  *         content:
  *           application/json:
  *             schema:
@@ -49,42 +49,40 @@ app.get('/node', (req, res) => {
  *                 properties:
  *                   id:
  *                     type: integer
- *                   name:
+ *                   title:
  *                     type: string
- *                   email:
+ *                   href:
  *                     type: string
+ *                   description:
+ *                     type: string
+ *                   imageUrl:
+ *                     type: string
+ *                   date:
+ *                     type: string
+ *                   datetime:
+ *                     type: string
+ *                   category:
+ *                     type: object
+ *                     properties:
+ *                       title:
+ *                         type: string
+ *                       href:
+ *                         type: string
+ *                   author:
+ *                     type: object
+ *                     properties:
+ *                       name:
+ *                         type: string
+ *                       role:
+ *                         type: string
+ *                       href:
+ *                         type: string
+ *                       imageUrl:
+ *                         type: string
  */
-app.get('/node/users', (req, res) => {
+app.get('/node/articles', (req, res) => {
   const data = readJsonFile('data.json');
-  res.json(data.users);
-});
-
-// Endpoint to get products
-/**
- * @swagger
- * /node/products:
- *   get:
- *     summary: Retrieve a list of products
- *     responses:
- *       200:
- *         description: A list of products
- *         content:
- *           application/json:
- *             schema:
- *               type: array
- *               items:
- *                 type: object
- *                 properties:
- *                   id:
- *                     type: integer
- *                   name:
- *                     type: string
- *                   price:
- *                     type: number
- */
-app.get('/node/products', (req, res) => {
-  const data = readJsonFile('data.json');
-  res.json(data.products);
+  res.json(data.articles);
 });
 
 app.listen(port, () => {
