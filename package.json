@@ -9,10 +9,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.19.2",
+    "morgan": "^1.10.0",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.1",
-    "morgan": "^1.10.0",
     "universal-analytics": "^0.5.3"
   }
 }

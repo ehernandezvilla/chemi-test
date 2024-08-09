@@ -5,6 +5,7 @@ const path = require('path');
 const morgan = require('morgan');
 const setupSwagger = require('./swagger');
 const customLogger = require('./customLogger');
+const cors = require('cors');
 
 const app = express();
 const port = 3000;
@@ -17,6 +18,9 @@ app.use(morgan('combined', { stream: accessLogStream }));
 
 // Setup custom logger
 app.use(customLogger);
+
+// Setup CORS
+app.use(cors());
 
 // Function to read JSON data from file
 const readJsonFile = (filePath) => {
